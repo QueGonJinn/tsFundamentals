@@ -456,3 +456,20 @@ export function angle(n: number): number {
 }
 
 console.log(angle(3));
+
+
+export function warnTheSheep(queue: string[]): string {
+	const newArr = queue.reverse()
+	if (newArr[0] === 'wolf') {
+		return 'Pls go away and stop eating my sheep';
+	}
+	let n = 0;
+	for (let i = 1; i < newArr.length; i++) {
+		if (newArr[i] === 'wolf') {
+			n = i;
+		}
+	}
+	return `Oi! Sheep number ${n}! You are about to be eaten by a wolf!`
+}
+
+console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
