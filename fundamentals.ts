@@ -416,12 +416,17 @@ export function rowWeightsf(arr: number[]) {
 console.log(rowWeightsf([0, 1, 0]));
 
 export function bouncingBall(h: number, bounce: number, window: number): number {
-  if (h < 0 || (bounce < 0 || bounce > 1) || window > h) {
-	return -1;
+  if (h <= 0 || window >= h || bounce <= 0 || bounce >= 1) {
+	return -1
+  } 
+  let see = -1;
+  while (h > window) {
+	see += 2;
+	h = h * bounce;
   }
-  let count = 0;
 
-  return count;
+  return see
+  
 }
 
 console.log(bouncingBall(30, 0.4, 10));

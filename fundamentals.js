@@ -367,11 +367,15 @@ function rowWeightsf(arr) {
 exports.rowWeightsf = rowWeightsf;
 console.log(rowWeightsf([0, 1, 0]));
 function bouncingBall(h, bounce, window) {
-    if (h < 0 || (bounce < 0 || bounce > 1) || window > h) {
+    if (h <= 0 || window >= h || bounce <= 0 || bounce >= 1) {
         return -1;
     }
-    let count = 0;
-    return count;
+    let see = -1;
+    while (h > window) {
+        see += 2;
+        h = h * bounce;
+    }
+    return see;
 }
 exports.bouncingBall = bouncingBall;
 console.log(bouncingBall(30, 0.4, 10));
