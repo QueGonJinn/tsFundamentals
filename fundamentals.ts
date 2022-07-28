@@ -430,3 +430,23 @@ export function bouncingBall(h: number, bounce: number, window: number): number 
 }
 
 console.log(bouncingBall(30, 0.4, 10));
+
+export const race = (v1:number, v2:number, g:number) => {
+  if (v1 >= v2) {
+	return null
+  }
+  let time = g / (v2 - v1);
+  const hour = Math.trunc(time);
+  const miutes = Math.floor((time - hour) * 60);
+  const sec = Math.floor((((time - hour) * 60) - miutes) * 60);
+  return [hour, miutes, sec];
+}
+
+console.log(race(80, 91, 37));
+
+
+export function accum(s: string): string {
+	return s.split('').map((e, i) => e.repeat(i+1)).map( e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join('-');
+}
+
+console.log(accum('ZpglnRxqenU'));

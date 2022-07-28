@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
+exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
 function findNeedle(haystack) {
     return `found the needle at position ${haystack.findIndex(value => value === 'needle')}`;
 }
@@ -379,3 +379,20 @@ function bouncingBall(h, bounce, window) {
 }
 exports.bouncingBall = bouncingBall;
 console.log(bouncingBall(30, 0.4, 10));
+const race = (v1, v2, g) => {
+    if (v1 >= v2) {
+        return null;
+    }
+    let time = g / (v2 - v1);
+    const hour = Math.trunc(time);
+    const miutes = Math.floor((time - hour) * 60);
+    const sec = Math.floor((((time - hour) * 60) - miutes) * 60);
+    return [hour, miutes, sec];
+};
+exports.race = race;
+console.log((0, exports.race)(80, 91, 37));
+function accum(s) {
+    return s.split('').map((e, i) => e.repeat(i + 1)).map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join('-');
+}
+exports.accum = accum;
+console.log(accum('ZpglnRxqenU'));
