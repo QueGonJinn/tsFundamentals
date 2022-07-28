@@ -473,3 +473,10 @@ export function warnTheSheep(queue: string[]): string {
 }
 
 console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+
+
+export function reverseWords(str: string): string {
+	return str.split(' ').map(e => e.split('').reverse().join('')).join(' ');
+}
+
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
