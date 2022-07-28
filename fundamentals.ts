@@ -450,3 +450,9 @@ export function accum(s: string): string {
 }
 
 console.log(accum('ZpglnRxqenU'));
+
+export function angle(n: number): number {
+  return 180 * (n -2);
+}
+
+console.log(angle(3));

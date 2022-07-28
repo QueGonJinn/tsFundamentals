@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
+exports.angle = exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
 function findNeedle(haystack) {
     return `found the needle at position ${haystack.findIndex(value => value === 'needle')}`;
 }
@@ -396,3 +396,8 @@ function accum(s) {
 }
 exports.accum = accum;
 console.log(accum('ZpglnRxqenU'));
+function angle(n) {
+    return 180 * (n - 2);
+}
+exports.angle = angle;
+console.log(angle(3));
