@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reverseWords = exports.warnTheSheep = exports.angle = exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
+exports.printerError = exports.findOdd = exports.reverseWords = exports.warnTheSheep = exports.angle = exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
 function findNeedle(haystack) {
     return `found the needle at position ${haystack.findIndex(value => value === 'needle')}`;
 }
@@ -421,3 +421,26 @@ function reverseWords(str) {
 }
 exports.reverseWords = reverseWords;
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+const findOdd = (xs) => {
+    for (let i = 0; i < xs.length; i++) {
+        const count = xs.filter(value => value === xs[i]).length;
+        if (count % 2 == 1) {
+            return xs[i];
+        }
+    }
+    return -1;
+};
+exports.findOdd = findOdd;
+console.log((0, exports.findOdd)([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]));
+function printerError(s) {
+    let reg = /[nopqrstuvwxyz]/;
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'n' || s[i] === 'o' || s[i] === 'p' || s[i] === 'q' || s[i] === 'r' || s[i] === 's' || s[i] === 't' || s[i] === 'u' || s[i] === 'v' || s[i] === 'w' || s[i] === 'x' || s[i] === 'y' || s[i] === 'z') {
+            count++;
+        }
+    }
+    return `${count} / ${s.length}`;
+}
+exports.printerError = printerError;
+console.log(printerError('aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz'));

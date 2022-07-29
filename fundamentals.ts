@@ -480,3 +480,28 @@ export function reverseWords(str: string): string {
 }
 
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+
+export const findOdd = (xs: number[]): number => {
+  for (let i = 0; i < xs.length; i++) {
+    const count = xs.filter(value => value === xs[i]).length;
+    if (count % 2 == 1) {
+        return xs[i];
+    }
+	
+}
+return -1
+};
+
+console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
+
+export function printerError(s: string): string {
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+	if (s[i] === 'n' || s[i] === 'o' || s[i] === 'p' || s[i] === 'q' || s[i] === 'r' || s[i] === 's' || s[i] === 't' || s[i] === 'u' || s[i] === 'v' || s[i] === 'w' || s[i] === 'x' || s[i] === 'y' || s[i] === 'z') {
+		count++
+	}
+  }
+  return `${count} / ${s.length}`;
+}
+
+console.log(printerError('aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz'));
