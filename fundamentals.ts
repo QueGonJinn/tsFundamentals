@@ -505,3 +505,33 @@ export function printerError(s: string): string {
 }
 
 console.log(printerError('aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz'));
+
+export const stockList = (listOfArt:string[], listOfCat:string[]):string => {
+  let res = [];
+  for (let i = 0; i < listOfCat.length; i++) {
+	for (let j = 0; j < listOfArt.length; j++) {
+		
+	}
+  }
+  return "..."
+}
+
+console.log(stockList(["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"], ["A", "B", "C", "D"]));
+
+export function goals (laLigaGoals:number, copaDelReyGoals:number, championsLeagueGoals:number): number {
+  return laLigaGoals + copaDelReyGoals	+ championsLeagueGoals;
+}
+
+console.log(goals(5, 10, 2));
+
+
+export function comp(a1: number[] | null, a2: number[] | null): boolean {
+  if (a1?.length === 0 || a2?.length === 0) {
+	return false;
+  } 
+  return a1?.map(e => e * e).sort().toString() === a2?.sort().toString();
+}
+
+
+console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]));
+
