@@ -9,7 +9,7 @@ function findShort(s) {
             min = arr[i];
         }
     }
-    return min;
+    return min.length;
 }
 exports.findShort = findShort;
 console.log(findShort('bitcoin take over the world maybe who knows perhaps'));
