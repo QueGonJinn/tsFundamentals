@@ -498,3 +498,5 @@ let sunday = [6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 
     7150, 6567, 8524, 7613, 7809, 5562, 7799, 7179, 5184, 7960, 9455, 5633, 9085];
 var stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
 console.log(stairsIn20(stairs));
+function hero(bullets, dragons) { return (bullets % dragons === 0) ? true : false; }
+console.log(hero(1500, 751));

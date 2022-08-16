@@ -575,3 +575,6 @@ export function stairsIn20(stairs:number[][]) {
 
 console.log(stairsIn20(stairs));
 
+
+function hero (bullets: number, dragons: number): boolean  { return (bullets / 2 >= dragons) ? true : false;}
+console.log(hero(1500, 751));
