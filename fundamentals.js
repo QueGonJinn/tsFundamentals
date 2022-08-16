@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.stairsIn20 = exports.comp = exports.goals = exports.stockList = exports.printerError = exports.findOdd = exports.reverseWords = exports.warnTheSheep = exports.angle = exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
+exports.quarterOf = exports.stairsIn20 = exports.comp = exports.goals = exports.stockList = exports.printerError = exports.findOdd = exports.reverseWords = exports.warnTheSheep = exports.angle = exports.accum = exports.race = exports.bouncingBall = exports.rowWeightsf = exports.rowWeights = exports.position = exports.doubleChar = exports.longestConsec = exports.hello = exports.smallEnough = exports.greet = exports.xor = exports.findNb = exports.checkExam = exports.capitalize = exports.findDifference = exports.litres = exports.index = exports.getRealFloor = exports.between = exports.xo = exports.feast = exports.descendingOrder = exports.reverseSeq = exports.findAverage = exports.Kata2 = exports.Kata = exports.duplicateCount = exports.max = exports.min = exports.positiveSum = exports.getSum = exports.divisors = exports.twiceAsOld = exports.expressionsMatter = exports.correct = exports.grow = exports.findNeedle = void 0;
 function findNeedle(haystack) {
     return `found the needle at position ${haystack.findIndex(value => value === 'needle')}`;
 }
@@ -498,5 +498,25 @@ let sunday = [6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 
     7150, 6567, 8524, 7613, 7809, 5562, 7799, 7179, 5184, 7960, 9455, 5633, 9085];
 var stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
 console.log(stairsIn20(stairs));
-function hero(bullets, dragons) { return (bullets % dragons === 0) ? true : false; }
+function hero(bullets, dragons) { return (bullets / 2 >= dragons) ? true : false; }
 console.log(hero(1500, 751));
+function quarterOf(month) {
+    switch (month) {
+        case 1:
+        case 2:
+        case 3:
+            return 1;
+        case 4:
+        case 5:
+        case 6:
+            return 2;
+        case 7:
+        case 8:
+        case 9:
+            return 3;
+        default:
+            return 4;
+    }
+}
+exports.quarterOf = quarterOf;
+console.log(quarterOf(11));
